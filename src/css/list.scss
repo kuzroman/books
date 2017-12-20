@@ -1,0 +1,23 @@
+.item{
+  width: 600px;
+  display: table;
+  margin: 0 auto;
+
+  &__tr{
+    display: table-row;
+  }
+
+  &__td{
+    display: table-cell;
+    padding: 6px;
+  }
+
+  &__name{
+    width: 70%;
+  }
+
+  &__author{
+    width: 30%;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,25 @@
+.sign{
+  width: 600px;
+  margin: 0 auto;
+
+  &__up{
+
+    label{
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    &__field{
+      width: 200px;
+      display: inline-block;
+    }
+  }
+
+  &__warning{
+    margin-top: 30px;
+
+    &.hidden{
+      display: none;
+    }
+  }
+}

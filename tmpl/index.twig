@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/dist/main.css">
+</head>
+<body>
+
+<div class="topline">
+    <div class="topline__inner js-history" >
+        <a href="/#">Main</a>
+        <a href="/#!/level/elementary">Elementary</a>
+        <a href="/#!/level/pre-intermediate">Pre-intermediate</a>
+        <a href="/#!/level/intermediate">Intermediate</a>
+        <a href="/#!/level/upper-intermediate">Upper-intermediate</a>
+        <a href="/#!/level/advanced">Advanced</a>
+        <a href="/php/pages/signup.php">signup</a>
+        {#<a href="">Feedback</a>#}
+    </div>
+</div>
+
+<div class="l-left">
+    111
+</div>
+
+<div class="l-right">
+    222
+</div>
+
+<div class="l-center js-content-center">
+    {% block content_center %}{% endblock %}
+</div>
+
+<script>
+    BS = {
+        DIR: '{{ DIR }}'
+    }
+</script>
+
+{% block page_scripts %}
+    <script src="/dist/main.js"></script>
+{% endblock %}
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twig/twig": "^1.35",
+        "delight-im/auth": "^7.2"
+    }
+}

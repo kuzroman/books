@@ -1,0 +1,28 @@
+{% for book in books %}
+    <div class="article">
+        <div class="article__item">
+            <a href="" class="article__title">{{ book.name }}</a>
+            <div class="js-clicable">
+                {# <img class="article__img" src="src/img/books/{{ book.id }}.jpg" alt=""> #}
+                {{ book.description }}
+            </div>
+            <p>
+                {% if book['total-words'] %}<b>All words: </b><span>{{ book['total-words'] }}</span><br>{% endif %}
+                {% if book['unique-words'] %}<b>Unique: </b><span>{{ book['unique-words'] }}</span>{% endif %}
+            </p>
+            <p class="article__item__links">
+                <b>Download ebook: </b>
+                {% if book['reed-epub'] %}<a href="src/books/epub/{{ book.id }}.epub">epub</a>{% endif %}
+                {% if book['reed-mobi'] %}<a href="src/books/mobi/{{ book.id }}.mobi">mobi</a>{% endif %}
+                {% if book['reed-fb2'] %}<a href="src/books/fb2/{{ book.id }}.fb2">fb2</a>{% endif %}
+                {% if book['reed-rtf'] %}<a href="src/books/rtf/{{ book.id }}.rtf">rtf</a>{% endif %}
+                {% if book['reed-txt'] %}<a href="src/books/txt/{{ book.id }}.txt">txt</a>{% endif %}
+                <br>
+
+                <b>Download audiobook: </b>
+                {% if book['mp3'] %}<a href="src/books/mp3/{{ book.id }}.mp3">mp3</a>{% endif %}
+                {% if book['torrent'] %}<a href="src/books/torrent/{{ book.id }}.torrent">torrent</a>{% endif %}
+            </p>
+        </div>
+    </div>
+{% endfor %}

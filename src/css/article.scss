@@ -1,0 +1,35 @@
+.article{
+
+  &__title{
+    font-weight: bold;
+    font-size: 18px;
+    color: #039900;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  &__item{
+    width: 600px;
+    margin: 0 auto 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);;
+    padding-bottom: 15px;
+
+    & > p{
+      margin-top: 20px;
+    }
+
+    &__links{
+      & a{
+        padding: 0 10px;
+
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &__img{
+    float: right;
+    margin: 0 0 10px 15px;
+  }
+}

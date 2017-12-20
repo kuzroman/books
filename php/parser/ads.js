@@ -1,0 +1,1 @@
+var user = {name: "Вася", age: 25 };

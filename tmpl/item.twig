@@ -1,0 +1,8 @@
+<div class="item">
+{% for book in books %}
+    <div class="item__tr">
+        {% if book.name %}<div class="item__td item__name"><a href="#!/book/{{ book.id }}">{{ book.name }}</a></div>{% endif %}
+        {% if book.author %}<div class="item__td item__author"><a href="#!/author/{{ book.author }}">{{ book.author }}</a></div>{% endif %}
+    </div>
+{% endfor %}
+</div>
