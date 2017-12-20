@@ -12,6 +12,7 @@ if (!empty($_GET['email']) && !empty($_GET['password']) && !empty($_GET['usernam
 
         // we have signed up a new user with the ID `$userId`
         echo json_encode(['error' => 0, 'text' => 'You have successfully registered']);
+
     } catch (\Delight\Auth\InvalidEmailException $e) {
         // invalid email address
         echo json_encode(['error' => 1, 'text' => 'Invalid email address']);

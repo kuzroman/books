@@ -3,7 +3,7 @@
 {% block content_center %}
 
 <div class="sign">
-    <form class="sign__up js-signup-form" data-parsley-validate="">
+    <form class="sign__up js-sign-up-form" data-parsley-validate="">
         <label for="">
             <span class="sign__up__field">Email</span>
             <input name="email" type="email" required="">
@@ -22,13 +22,12 @@
             <input name="password2" type="password" required="" data-parsley-equalto="[name='password']">
         </label>
 
-        <input type="submit" value="Sign up" class="js-signup-submit">
+        <input type="submit" value="Sign up">
     </form>
 
     <div class="sign__warning js-signup-warning hidden">
         <p class="js-signup-warning-text"></p>
     </div>
-
 </div>
 {% endblock %}
 

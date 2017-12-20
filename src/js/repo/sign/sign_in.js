@@ -1,5 +1,4 @@
-var $form = $('.js-signup-form');
-// var $submit = $form.find('.js-signup-submit');
+var $form = $('.js-sign-in-form');
 var $warning = $('.js-signup-warning');
 var $warningText = $warning.find('.js-signup-warning-text');
 
@@ -23,7 +22,7 @@ function bindEvents() {
 }
 
 function submit() {
-    signUp().done(function (data) {
+    sign().done(function (data) {
         // console.log(data);
         $warningText.html(data.text);
         $warning.removeClass('hidden');
@@ -34,9 +33,9 @@ function submit() {
     });
 }
 
-function signUp() {
+function sign() {
     return $.ajax({
-        url: '/php/ajax/signup.php',
+        url: '/php/ajax/sign_in.php',
         data: $form.serialize(),
         dataType: 'json',
         error: function (err) {
