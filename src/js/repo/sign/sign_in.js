@@ -15,14 +15,15 @@ function bindEvents() {
         e.preventDefault();
         $form.parsley().validate();
         if ($form.parsley().isValid()) {
-            submit();
+            submit().done(function () {
+                console.log('verification');
+            });
         }
     });
-
 }
 
 function submit() {
-    sign().done(function (data) {
+    return sign().done(function (data) {
         // console.log(data);
         $warningText.html(data.text);
         $warning.removeClass('hidden');
@@ -35,7 +36,7 @@ function submit() {
 
 function sign() {
     return $.ajax({
-        url: '/php/ajax/sign_in.php',
+        url: '/php/ajax/sign/sign_in.php',
         data: $form.serialize(),
         dataType: 'json',
         error: function (err) {

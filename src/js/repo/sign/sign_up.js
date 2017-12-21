@@ -35,7 +35,7 @@ function submit() {
 
 function sign() {
     return $.ajax({
-        url: '/php/ajax/sign_up.php',
+        url: '/php/ajax/sign/sign_up.php',
         data: $form.serialize(),
         dataType: 'json',
         error: function (err) {

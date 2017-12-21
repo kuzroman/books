@@ -1,0 +1,25 @@
+<div class="topline">
+    <div class="topline__inner js-history" >
+        <a href="/#">Main</a>
+        <a href="/#!/level/elementary">Elementary</a>
+        <a href="/#!/level/pre-intermediate">Pre-intermediate</a>
+        <a href="/#!/level/intermediate">Intermediate</a>
+        <a href="/#!/level/upper-intermediate">Upper-intermediate</a>
+        <a href="/#!/level/advanced">Advanced</a>
+
+        <div class="topline__menu">
+            {% if sign.isLoggedIn %}
+                {# добавить иконку #}
+                {# добавить смену данных, пароля имени, почты #}
+                <a href="#" class="topline__menu__name">{{ sign.userName }}</a>
+            {% else %}
+                <a href="/php/pages/sign/sign_in.php" class="js-topline-open-submenu">sign in</a>
+                <div class="topline__submenu js-topline-submenu">
+                    <a href="/php/pages/sign/sign_up.php">sign up</a>
+                </div>
+            {% endif %}
+        </div>
+
+        {#<a href="">Feedback</a>#}
+    </div>
+</div>

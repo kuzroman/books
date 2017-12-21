@@ -1,14 +1,45 @@
 .topline{
+  background: #205081;
+  padding: 10px 0 12px;
+  margin-bottom: 30px;
 
   &__inner{
-    width: 1000px;
-    margin: 10px auto 30px;
-    text-align: center;
+    width: 880px;
+    margin: 0 auto;
+    //text-align: center;
 
-    & > a{
-      padding: 6px 12px;
-      color: #000;
-      font-weight: bold;
+    & a{
+      padding: 10px 12px;
+      color: #fff;
+      text-decoration: none;
+      text-align: left;
+
+      &:hover{
+        background-color: #296ca3;
+      }
     }
+  }
+
+  &__menu{
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    background: #205081;
+    margin-top: -6px;
+
+    & a{
+      display: block;
+      padding: 6px 12px;
+    }
+
+    &__name{
+      color: #fc0 !important;
+    }
+  }
+
+  &__submenu{
+    display: none;
+    padding: 35px 5px 0 5px;
+    margin: -35px 0 0 -5px;
   }
 }

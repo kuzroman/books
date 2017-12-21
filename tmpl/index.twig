@@ -5,19 +5,7 @@
 </head>
 <body>
 
-<div class="topline">
-    <div class="topline__inner js-history" >
-        <a href="/#">Main</a>
-        <a href="/#!/level/elementary">Elementary</a>
-        <a href="/#!/level/pre-intermediate">Pre-intermediate</a>
-        <a href="/#!/level/intermediate">Intermediate</a>
-        <a href="/#!/level/upper-intermediate">Upper-intermediate</a>
-        <a href="/#!/level/advanced">Advanced</a>
-        <a href="/php/pages/sign_in.php">sign in</a>
-        <a href="/php/pages/sign_up.php">sign up</a>
-        {#<a href="">Feedback</a>#}
-    </div>
-</div>
+{% include 'topline.twig' %}
 
 <div class="l-left">
     111
@@ -32,9 +20,11 @@
 </div>
 
 <script>
+{% if DIR %}
     BS = {
         DIR: '{{ DIR }}'
-    }
+    };
+{% endif %}
 </script>
 
 {% block page_scripts %}

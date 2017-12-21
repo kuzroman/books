@@ -7,12 +7,17 @@ if (!empty($_GET['email']) && !empty($_GET['password']) && !empty($_GET['usernam
 
     try {
         $userId = $auth->register($_GET['email'], $_GET['password'], $_GET['username'], function ($selector, $token) {
-            // send `$selector` and `$token` to the user (e.g. via email)
+            // send `$selector` and `$token` to the user (e.g. via email) !!!!!!
+
+
+            // за неимением локального email сервера, урл прокину здесь todo - вырезать на проде!
+            $url = '/php/ajax/sign/verification.php.php?selector=' . \urlencode($selector) . '&token=' . \urlencode($token);
+
+            // we have signed up a new user with the ID `$userId`
+            echo json_encode(['error' => 0, 'text' => 'You have successfully registered, check your email & click by link for confirm address', 'url' => $url]);
+            // получилось - {"url":"\/php\/ajax\/sign_in.php?selector=IwqajjMT-1NNx06S&token=QAUwEdSsW9ibmZVI"}
+            // после json_encode должно быть - http://books.loc/php/ajax/sign/verification.php?selector=IwqajjMT-1NNx06S&token=QAUwEdSsW9ibmZVI
         });
-
-        // we have signed up a new user with the ID `$userId`
-        echo json_encode(['error' => 0, 'text' => 'You have successfully registered']);
-
     } catch (\Delight\Auth\InvalidEmailException $e) {
         // invalid email address
         echo json_encode(['error' => 1, 'text' => 'Invalid email address']);
